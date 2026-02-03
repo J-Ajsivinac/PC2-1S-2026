@@ -674,8 +674,9 @@ Module Program
 
             Console.WriteLine("========================================")
         Else
-            ' Si no hay clientes registrados, mostramos este mensaje
+            ' Si no hay clientes registrados, mostramos este mensaje mensaje de prueba
             Console.WriteLine(vbCrLf & "No se registraron clientes durante esta sesión.")
+
         End If
 
         ' Pausa final para que el usuario pueda leer los resultados antes de cerrar
