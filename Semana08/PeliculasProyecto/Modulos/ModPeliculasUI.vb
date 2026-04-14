@@ -40,6 +40,12 @@
         frm.btnEliminar.Enabled = False
     End Sub
 
+    Public Sub ModoEdicion(frm As FrmPeliculas)
+        frm.btnGuardar.Enabled = False
+        frm.btnEditar.Enabled = True
+        frm.btnEliminar.Enabled = True
+    End Sub
+
     Public Sub MostrarError(frm As Form, mensaje As String)
         Dim lbl As Label = CType(frm.Controls("lblMensaje"), Label)
         lbl.ForeColor = Color.Red

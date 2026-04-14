@@ -109,7 +109,7 @@ Partial Class FrmPeliculas
         ' 
         ' btnGuardar
         ' 
-        btnGuardar.BackColor = Color.FromArgb(CByte(44), CByte(122), CByte(58))
+        btnGuardar.BackColor = Color.FromArgb(44, 122, 58)
         btnGuardar.FlatStyle = FlatStyle.Flat
         btnGuardar.ForeColor = SystemColors.ButtonHighlight
         btnGuardar.Location = New Point(22, 155)
@@ -121,7 +121,7 @@ Partial Class FrmPeliculas
         ' 
         ' btnEditar
         ' 
-        btnEditar.BackColor = Color.FromArgb(CByte(138), CByte(163), CByte(190))
+        btnEditar.BackColor = Color.FromArgb(138, 163, 190)
         btnEditar.FlatStyle = FlatStyle.Flat
         btnEditar.ForeColor = SystemColors.ButtonHighlight
         btnEditar.Location = New Point(149, 155)
@@ -133,7 +133,7 @@ Partial Class FrmPeliculas
         ' 
         ' btnEliminar
         ' 
-        btnEliminar.BackColor = Color.FromArgb(CByte(185), CByte(140), CByte(140))
+        btnEliminar.BackColor = Color.FromArgb(185, 140, 140)
         btnEliminar.FlatStyle = FlatStyle.Flat
         btnEliminar.ForeColor = SystemColors.ButtonHighlight
         btnEliminar.Location = New Point(276, 155)

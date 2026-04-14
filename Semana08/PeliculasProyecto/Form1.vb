@@ -118,7 +118,6 @@ Public Class Form1
             ' Restauramos la interfaz sin importar qué pasó
             txtUsuario.Clear()
             txtContrasenia.Clear()
-            lblMensaje.Text = ""
             prgCargando.Visible = False
             btnLogin.Enabled = True
         End Try

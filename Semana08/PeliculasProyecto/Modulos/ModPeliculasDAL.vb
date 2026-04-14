@@ -112,6 +112,34 @@ Module ModPeliculasDAL
         End Using
     End Sub
 
+    Public Sub ActualizarPelicula(codigo As Integer, nombre As String, minutos As Integer, codGenero As Integer, codDirector As Integer)
+        Using conn As New SqlConnection(ModConexion.ObtenerCadenaConexion())
+            Dim sql As String = "UPDATE PELICULA SET Nombre = @nombre, Minutos = @minutos, " &
+                                "Codigo_Genero = @genero, Codigo_Director = @director " &
+                                "WHERE Codigo_Pelicula = @codigo"
+            Using cmd As New SqlCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@nombre", nombre.Trim())
+                cmd.Parameters.AddWithValue("@minutos", minutos)
+                cmd.Parameters.AddWithValue("@genero", codGenero)
+                cmd.Parameters.AddWithValue("@director", codDirector)
+                cmd.Parameters.AddWithValue("@codigo", codigo)
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
+    Public Sub EliminarPelicula(codigo As Integer)
+        Using conn As New SqlConnection(ModConexion.ObtenerCadenaConexion())
+            Dim sql As String = "DELETE FROM PELICULA WHERE Codigo_Pelicula = @codigo"
+            Using cmd As New SqlCommand(sql, conn)
+                cmd.Parameters.AddWithValue("@codigo", codigo)
+                conn.Open()
+                cmd.ExecuteNonQuery()
+            End Using
+        End Using
+    End Sub
+
     ''' <summary>
     ''' Obtiene el código real (codigo_genero o codigo_director) desde el Tag del ComboBox
     ''' </summary>
